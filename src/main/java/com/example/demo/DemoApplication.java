@@ -25,5 +25,12 @@ public class DemoApplication implements CommandLineRunner {
 		dbz.setName("Dbz");
 		dbz.setRelease(new Date());
 		hobbieDao.save(dbz);
+
+		Anime yugioh=new Anime();
+		yugioh.setAutor("Akari");
+		yugioh.setName("Yugioh");
+		yugioh.setRelease(new Date());
+		hobbieDao.save(yugioh);
+
 	}
 }
