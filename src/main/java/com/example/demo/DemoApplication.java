@@ -2,6 +2,7 @@ package com.example.demo;
 
 import com.example.demo.dao.HobbieDao;
 import com.example.demo.model.Anime;
+import com.example.demo.model.Sport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,10 +21,14 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Anime dbz=new Anime();
+		/*Anime dbz=new Anime();
 		dbz.setAutor("Akira");
 		dbz.setName("Dbz");
 		dbz.setRelease(new Date());
-		hobbieDao.save(dbz);
+		hobbieDao.save(dbz);*/
+		Sport sport=new Sport();
+		sport.setName("Futbol");
+		sport.setMoment("Solo sabados");
+		hobbieDao.save(sport);
 	}
 }

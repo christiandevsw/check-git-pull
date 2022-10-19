@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.dto.AnimeDTO;
+import com.example.demo.dto.SportDTO;
 import com.example.demo.service.HobbieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,8 +14,12 @@ public class HobbiesController {
     @Autowired
     private HobbieService hobbieService;
 
-    @GetMapping("/animes")
+    /*@GetMapping("/animes")
     public List<AnimeDTO> findAll(){
+        return hobbieService.findAll();
+    }*/
+    @GetMapping("/sports")
+    public List<SportDTO> findAll(){
         return hobbieService.findAll();
     }
 }
