@@ -30,5 +30,10 @@ public class DemoApplication implements CommandLineRunner {
 		sport.setName("Futbol");
 		sport.setMoment("Solo sabados");
 		hobbieDao.save(sport);
+
+		Sport basket=new Sport();
+		basket.setName("Basket");
+		basket.setMoment("Fines de semana");
+		hobbieDao.save(basket);
 	}
 }
